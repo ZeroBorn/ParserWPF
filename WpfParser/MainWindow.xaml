@@ -1,0 +1,100 @@
+﻿<Window x:Class="WpfParser.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfParser"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.25*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <!--Left panel-->
+        
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="1.7*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="1">
+                <Button x:Name="OpenDoc"
+                        Content="Обзор документа"
+                        Height="25"
+                        FontStyle="Italic"
+                        FontFamily="Bahnschrift"
+                        BorderThickness="0"
+                        Background="White"
+                        HorizontalContentAlignment="Left"
+                        Click="OpenDoc_Click"/>
+
+                <Border Height="10"/>
+
+                <Button x:Name="AddDb"
+                        Content="Добавить значения"
+                        Height="25"
+                        FontStyle="Italic"
+                        FontFamily="Bahnschrift"
+                        BorderThickness="0"
+                        Background="White"
+                        HorizontalContentAlignment="Left" 
+                        Click="AddDb_Click"/>
+
+                <Border Height="10"/>
+
+
+                <Button x:Name="Clear"
+                        Content="Очистить лист"
+                        Height="25"
+                        FontStyle="Italic"
+                        FontFamily="Bahnschrift"
+                        BorderThickness="0"
+                        Background="White"
+                        HorizontalContentAlignment="Left" 
+                        Click="Clear_Click"/>
+
+                <Border Height="10"/>
+
+                <Button x:Name="HelpUse"
+                        Content="Помощь"
+                        Height="25"
+                        FontStyle="Italic"
+                        FontFamily="Bahnschrift"
+                        BorderThickness="0"
+                        Background="White"
+                        HorizontalContentAlignment="Left" 
+                        Click="HelpUse_Click"/>
+
+                <Border Height="10"/>
+
+                <Button x:Name="Close"
+                        Content="Выход"
+                        Height="25"
+                        FontStyle="Italic"
+                        FontFamily="Bahnschrift"
+                        BorderThickness="0"
+                        Background="White"
+                        HorizontalContentAlignment="Left" 
+                        Click="Close_Click"/>
+
+            </StackPanel>
+            
+        </Grid>
+
+        <!--Right panel-->
+
+        <ScrollViewer Grid.Column="1">
+            <TextBlock x:Name="txtEditor"
+                       TextWrapping="Wrap"
+                       />    
+        </ScrollViewer>
+                                
+        
+        
+    
+    </Grid>
+</Window>
